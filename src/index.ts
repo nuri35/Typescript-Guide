@@ -1,4 +1,5 @@
 import axios, { Axios, AxiosResponse } from 'axios';
+
 // Todo: 1. Fix the error by adding an interface to the response.data
 const url = 'https://jsonplaceholder.typicode.com/todos/1';
 
@@ -10,6 +11,7 @@ interface Todo {
 
 axios.get(url).then((response: AxiosResponse<Todo, any>) => {
   let datams = response.data; // this is the correct approach
+
   // let datams = response.data as Todo; this is the correct approach
 
   // const todo: Todo = response.data; // ı thınk that wrong approach
@@ -27,3 +29,16 @@ const logTodo = (id: number, title: string, completed: boolean) => {
     Is it finished? ${completed}
   `);
 };
+
+declare global {
+  interface Array<T> {
+    myFn(): void;
+  }
+}
+Array.prototype.myFn = function () {
+  console.log('myFn');
+};
+
+const abc = [1, 2, 3];
+abc.myFn(); // ok
+console.log(abc.length);
