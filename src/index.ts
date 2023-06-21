@@ -35,10 +35,11 @@ declare global {
     myFn(): void;
   }
 }
+// arraye tıplemeyı ekledıgımız ıcın javascript'DE artık protypına myfn dıye fonksıyon ekleyebırlız
 Array.prototype.myFn = function () {
   console.log('myFn');
 };
 
-const abc = [1, 2, 3];
+const abc: Array<number> = [1, 2, 3];
 abc.myFn(); // ok
 console.log(abc.length);
