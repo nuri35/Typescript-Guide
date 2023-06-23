@@ -20,5 +20,9 @@ carmakers3.map((car: string): string => {
 // when we start with map foreach reduce etc. typescript prodive otomatic completion via car variable parameter. and then type will be string[]. but we want to return string so we need to add type annotation to return value this is string type. but  carmakers3 type is string[]
 
 // flexible types
-const importantDates: (Date | string)[] = [new Date()];
+const importantDates: (Date | string)[] = [new Date(), 'saas', 'asas', 'x'];
 importantDates.push('2030-10-10'); // ok
+// importantDates[2] = 20; // error
+// importantDates[0] =  1 // error
+importantDates[0] = 'sasa'; // ok // array type date ve string dısında bir şey kabul etmez ve date ve string
+// tiplerini istedigin sıraya koyabılrsın.
