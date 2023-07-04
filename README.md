@@ -13,6 +13,7 @@
 </p>
 
 > The main purpose of this project called "Typescript Guide with Tiny Projects" is to understand and use TypeScript by creating small projects. In this course, we will explore design pattern topics in depth while using TypeScript.
+> Before starting the first project, examples have been made in TypeScript regarding topics such as type annotations, type inference, functions, variables, objects, and tuples.
   
 
  
