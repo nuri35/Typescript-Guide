@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to typescript-guide 👋</h1>
+<h1 align="center">Welcome to typescript-guide with tiny projects 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/nuri35/Typescript-Guide#readme" target="_blank">
@@ -12,7 +12,11 @@
   </a>
 </p>
 
+> The main purpose of this project called "Typescript Guide with Tiny Projects" is to understand and use TypeScript by creating small projects. In this course, we will explore design pattern topics in depth while using TypeScript.
+  
+
 ### 🏠 [Homepage](https://github.com/nuri35/Typescript-Guide#readme)
+ 
 
 ## Install
 
@@ -23,14 +27,33 @@ npm install
 ## Usage
 
 ```sh
-npm run start
+npm run dev
 ```
+ 
+## Typescript project 01 - maps
 
-## Run tests
+- > In this project, the concepts of classes and interface structures are utilized to explore design patterns. The application marks random locations on a map.
 
-```sh
-npm run test
-```
+
+ - ## Requirements
+
+- ```sh
+  npm install -g parcel-bundler
+  <script   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNLrJhOMz6idD05pzfn5lhA-TAw-mAZCU"></script>
+  ```
+   > You need to get your own API key from Google Maps Platform. You can get it from [here](https://developers.google.com/maps/documentation/javascript/get-api-key)
+ 
+- ## Usage
+ 
+- ```sh
+  npx parcel index.html
+  ```
+
+- ## Screenshots
+
+  ![map](./maps/images/one.PNG "map")
+
+
 
 ## Author
 

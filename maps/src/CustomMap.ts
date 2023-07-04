@@ -64,8 +64,8 @@ export class CustomMapGood {
       },
     });
   }
-  // FİRST APPROACH but bad approach
-  //   addMarker(mappable: User | Company): void {
+  //   //   FİRST APPROACH but bad approach
+  //   addMarker2(mappable: User | Company): void {
   //     new google.maps.Marker({
   //       map: this.googleMap,
   //       position: {
