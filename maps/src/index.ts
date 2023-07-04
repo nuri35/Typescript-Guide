@@ -5,11 +5,10 @@ import { Company } from './Company';
 import { CustomMap, CustomMapGood } from './CustomMap';
 
 const user = new User();
+
 const company = new Company();
 
-const customMap = new CustomMap('map');
 const customMapGood = new CustomMapGood('map');
-customMap.addUserMarker(user);
-customMap.addCompanyMarker(company);
+
 customMapGood.addMarker(user);
 customMapGood.addMarker(company);

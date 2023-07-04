@@ -1,5 +1,6 @@
 import { User } from './User';
 import { Company } from './Company';
+import color from './User';
 
 export class CustomMap {
   private googleMap: google.maps.Map; // diyerek this.googleMap. diye metotlara ulaşamaz.
@@ -42,13 +43,15 @@ export class CustomMap {
 
 // ****** THİS İS Good CODEEEEEEE*******
 
-interface Mappable {
+export interface Mappable {
   location: {
     lat: number;
     lng: number;
   };
-}
 
+  markerContent(): string;
+  color: string;
+}
 export class CustomMapGood {
   private googleMap: google.maps.Map;
 
@@ -74,15 +77,19 @@ export class CustomMapGood {
 
   // SECOND APPROACH good approach
   addMarker(mappable: Mappable): void {
+    const infoWindow = new google.maps.InfoWindow({
+      content: mappable.markerContent(),
+    });
     const { lat, lng } = mappable.location;
-    new google.maps.Marker({
+    const marker = new google.maps.Marker({
       map: this.googleMap,
       position: {
         lat,
         lng,
       },
     });
+    marker.addListener('click', () => {
+      infoWindow.open(this.googleMap, marker);
+    });
   }
 }
-
-// ders  73 de kaldın...
