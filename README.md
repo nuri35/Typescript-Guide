@@ -15,6 +15,8 @@
 > The main purpose of this project called "Typescript Guide with Tiny Projects" is to understand and use TypeScript by creating small projects. In this course, we will explore design pattern topics in depth while using TypeScript.
   
 
+ 
+
 ### 🏠 [Homepage](https://github.com/nuri35/Typescript-Guide#readme)
  
 
@@ -30,7 +32,7 @@ npm install
 npm run dev
 ```
  
-## Typescript project 01 - maps
+## 🌍 Typescript project 01 - maps
 
 - > In this project, the concepts of classes and interface structures are utilized to explore design patterns. The application marks random locations on a map.
 
