@@ -29,5 +29,3 @@ export class User implements Mappable {
     `;
   }
 }
-
-//ders 77 de kaldın
