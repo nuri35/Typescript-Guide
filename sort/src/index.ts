@@ -1,6 +1,7 @@
 import { Sorter } from './Sorter';
 import { NumbersCollection } from './NumbersCollection';
 import { CharactersCollection } from './CharactersCollection';
+import { LinkedList } from './LinkedList';
 
 class SorterBad {
   constructor(public collection: number[] | string) {
@@ -30,13 +31,26 @@ class SorterBad {
     }
   }
 }
+//***** */ bu sekılde cagırmak ıstemıyoruz yanı  const numbersCollection = new NumbersCollection([10, 3, -5, 0]); dedık bunun ınstance'ını  new Sorter dıyerek parametre  olarak eklemek ıstemıyoruz. daha sonra  const sorter = new Sorter(numbersCollection); dıyıp sorter.bublesort() demekde ıstemıyoruz onun yerıne   const numbersCollection = new NumbersCollection([10, 3, -5, 0]);  numbersCollection.bubleSorter() demek istyirouz. dolayısıyla extends Sorter edecegız.
+
+// const numbersCollection = new NumbersCollection([10, 3, -5, 0]);
+// const charactersCollection = new CharactersCollection('Xaayb');
+// const linkedList = new LinkedList();
+// linkedList.add(500);
+// linkedList.add(-10);
+// linkedList.add(-3);
+// linkedList.add(4);
+
+// const sorter = new Sorter(numbersCollection);
+// const sorter2 = new Sorter(charactersCollection);
+// const sorter3 = new Sorter(linkedList);
+// sorter3.bubbleSort();
+// linkedList.print();
+// sorter.bubbleSort();
+// sorter2.bubbleSort();
+
+// correct
 
 const numbersCollection = new NumbersCollection([10, 3, -5, 0]);
-const charactersCollection = new CharactersCollection('Xaayb');
-
-const sorter = new Sorter(numbersCollection);
-const sorter2 = new Sorter(charactersCollection);
-sorter.bubbleSort();
-sorter2.bubbleSort();
+numbersCollection.bubbleSort();
 console.log(numbersCollection.data);
-console.log(charactersCollection.data);

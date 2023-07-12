@@ -1,5 +1,9 @@
-export class CharactersCollection {
-  constructor(public data: string) {}
+import { SorterExtended } from './Sorter';
+
+export class CharactersCollection extends SorterExtended {
+  constructor(public data: string) {
+    super();
+  }
 
   get length(): number {
     return this.data.length;
