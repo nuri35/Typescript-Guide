@@ -2,8 +2,10 @@ import fs from 'fs';
 import { dateStringToDate } from './utils';
 import { MatchResult } from './index';
 
+type MatchData = [Date, string, string, number, number, MatchResult, string];
+
 export class CsvFileReader {
-  data: string[][] = [];
+  data: MatchData[] = [];
 
   constructor(public filename: string) {}
 
@@ -12,7 +14,7 @@ export class CsvFileReader {
       .readFileSync(this.filename, { encoding: 'utf-8' })
       .split('\n')
       .map((row: string): string[] => row.split(','))
-      .map((row: string[]): any => {
+      .map((row: string[]): MatchData => {
         return [
           dateStringToDate(row[0]),
           row[1],
@@ -20,7 +22,7 @@ export class CsvFileReader {
           parseInt(row[3]),
           parseInt(row[4]),
           // type assertion
-          row[5] as MatchResult, // enum'dakı degerlerden bırı olmalı oldugnu bıldırmek lazım onun ıcın tıp ataması yaptım degısık bır tıp ataması array'in iinde böyle tıp ataması olablir.
+          row[5] as MatchResult,
           row[6],
         ];
       });
