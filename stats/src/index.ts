@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { CsvFileReader } from './csvFileReader';
+import { CsvFileReader } from './CsvFileReader';
 
 const matches = fs
   .readFileSync('football.csv', {
@@ -31,7 +31,7 @@ for (let match of matches) {
 
 // enum
 
-enum MatchResult {
+export enum MatchResult {
   HomeWin = 'H',
   AwayWin = 'A',
   Draw = 'D',
@@ -92,7 +92,7 @@ console.log(`Man United have played ${manUnitedHavePlayed} games`);
 // NEW CODE İS in CSVfileReader.ts
 // and call
 
-const reader = new CsvFileReader(`${__dirname}/football.csv`);
+const reader = new CsvFileReader(`football.csv`);
 reader.read();
 
 for (let match of reader.data) {
