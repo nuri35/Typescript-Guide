@@ -1,5 +1,6 @@
 import fs from 'fs';
 import { CsvFileReaderBackup } from './CsvFileReaderBackup';
+import { MatchReader } from './MatchReader';
 
 const matches = fs
   .readFileSync('football.csv', {
@@ -89,8 +90,6 @@ for (let match of matches) {
 // console.log(`Man United have played ${manUnitedHavePlayed} games`);
 
 // ********
-// NEW CODE İS in CsvFileReaderBackup.ts
-// and call
 
 const reader = new CsvFileReaderBackup(`football.csv`);
 reader.read();
@@ -108,3 +107,18 @@ for (let match of reader.data) {
 }
 
 // *****
+
+const readergd = new MatchReader(`football.csv`);
+readergd.read();
+
+for (let match of readergd.data) {
+  // REFACTORING
+  if (match[1] === 'Man United' && match[5] === MatchResult.HomeWin) {
+    manUnitedWins++;
+  } else if (match[2] === 'Man United' && match[5] === MatchResult.AwayWin) {
+    manUnitedWins++;
+  }
+  if (match[1] === 'Man United' || match[2] === 'Man United') {
+    manUnitedHavePlayed++;
+  }
+}
