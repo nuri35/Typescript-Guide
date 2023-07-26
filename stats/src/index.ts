@@ -1,6 +1,8 @@
 import fs from 'fs';
-import { CsvFileReaderBackup } from './CsvFileReaderBackup';
-import { MatchReader } from './MatchReader';
+import { CsvFileReaderBackup } from './badCode/CsvFileReaderBackup';
+import { MatchReader } from './refactorInteritanceApproach/MatchReader';
+import { MatchReader as MatchReader2 } from './refactorİnterfaceApproach/MatchReader';
+import { CsvFileReader as CsvFileReader2 } from './refactorİnterfaceApproach/CsvFileReader';
 
 const matches = fs
   .readFileSync('football.csv', {
@@ -122,3 +124,21 @@ for (let match of readergd.data) {
     manUnitedHavePlayed++;
   }
 }
+
+const csvFileReaderVal = new CsvFileReader2(`football.csv`);
+const matchReaderVal = new MatchReader2(csvFileReaderVal);
+matchReaderVal.load();
+
+for (let match of matchReaderVal.matches) {
+  // REFACTORING
+  if (match[1] === 'Man United' && match[5] === MatchResult.HomeWin) {
+    manUnitedWins++;
+  } else if (match[2] === 'Man United' && match[5] === MatchResult.AwayWin) {
+    manUnitedWins++;
+  }
+  if (match[1] === 'Man United' || match[2] === 'Man United') {
+    manUnitedHavePlayed++;
+  }
+}
+
+// better good code the best code

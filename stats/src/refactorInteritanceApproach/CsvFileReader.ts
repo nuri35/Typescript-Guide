@@ -1,9 +1,5 @@
-// refactor code to use generics
-
 import fs from 'fs';
-import { dateStringToDate } from './utils';
-import { MatchResult } from './index';
-
+// like that sorter example
 export abstract class CsvFileReader<T> {
   data: T[] = [];
 

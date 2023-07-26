@@ -1,10 +1,10 @@
 import { CsvFileReader } from './CsvFileReader';
-import { dateStringToDate } from './utils';
-import { MatchResult } from './index';
+import { dateStringToDate } from '../utils';
+import { MatchResult } from '../index';
 
 // type konusuna typescript sitesinden birdaha bakarsın buraya geldıgınde
 type MatchData = [Date, string, string, number, number, MatchResult, string];
-
+// match = football match
 export class MatchReader extends CsvFileReader<MatchData> {
   mapRow(row: string[]): MatchData {
     return [

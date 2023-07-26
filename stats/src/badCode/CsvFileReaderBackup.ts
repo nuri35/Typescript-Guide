@@ -1,6 +1,6 @@
 import fs from 'fs';
-import { dateStringToDate } from './utils';
-import { MatchResult } from './index';
+import { dateStringToDate } from '../utils';
+import { MatchResult } from '../index';
 
 // write ınterface type second map method return
 
@@ -32,4 +32,4 @@ export class CsvFileReaderBackup {
       });
   }
 }
-// bu sınıfmız yenıden kullanabılır degıl. football.csv'ye ozgu oldu. refeactor etmemız gerekıyor.buda dıger dosyada olacak. en azından yorumları buraya yazdık..
+// bu sınıfmız yenıden kullanabılır degıl. football.csv'ye ozgu oldu. refeactor etmemız gerekıyor.buda dıger dosyada olacak. en azından yorumları buraya yazdık.. yanı butun x.csv dosyalarına ozgu olması gerekır orengın book.csv yede ozgu olması laım onun ıcın ornegın en sondakı .map'i refactor etmemız gerek.
