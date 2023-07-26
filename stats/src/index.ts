@@ -140,5 +140,17 @@ for (let match of matchReaderVal.matches) {
     manUnitedHavePlayed++;
   }
 }
-
+import { ConsoleReport } from './reportTargets/ConsoleReport';
+import { WinsAnalysis } from './analyzers/WinsAnalysis';
+import { Summary } from './Summary';
 // better good code the best code
+
+const csvFileReaderValx = new CsvFileReader2(`football.csv`);
+const matchReaderValx = new MatchReader2(csvFileReaderValx);
+matchReaderValx.load();
+
+const summary = new Summary(
+  new WinsAnalysis('Man United'),
+  new ConsoleReport()
+);
+summary.buildAndPrintReport(matchReaderValx.matches);
