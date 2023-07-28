@@ -145,12 +145,20 @@ import { WinsAnalysis } from './analyzers/WinsAnalysis';
 import { Summary } from './Summary';
 // better good code the best code
 
-const csvFileReaderValx = new CsvFileReader2(`football.csv`);
+const csvFileReaderValx = new CsvFileReader2(`football.csv`); // static metotu bunun ıcınde uygulayabırlzı aşagıda ornegı var.
 const matchReaderValx = new MatchReader2(csvFileReaderValx);
 matchReaderValx.load();
-
+// summary example
 const summary = new Summary(
   new WinsAnalysis('Man United'),
   new ConsoleReport()
 );
 summary.buildAndPrintReport(matchReaderValx.matches);
+
+// related summary call static method
+
+const sum = Summary.winsAnalysisWithConsoleReport('Man United');
+sum.buildAndPrintReport(matchReaderValx.matches);
+
+// yarın ılk bu orneklerı gozden gecır sakın kafayla sonra yapay zekanın orneklerınden gıderek onları
+// dusun en son yapay zekaya bir konu anlattır sen yaz kodu
