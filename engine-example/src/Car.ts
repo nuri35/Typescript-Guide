@@ -1,8 +1,8 @@
-interface Engine {
+export interface Engine {
   start(): void;
 }
 
-class Car {
+export class Car {
   constructor(public engine: Engine) {}
 
   start() {
