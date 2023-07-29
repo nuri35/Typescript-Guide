@@ -6,6 +6,9 @@ import { MatchResult } from '../index';
 type MatchData = [Date, string, string, number, number, MatchResult, string];
 // match = football match
 export class MatchReader extends CsvFileReader<MatchData> {
+  constructor(public filename: string) {
+    super(filename);
+  }
   mapRow(row: string[]): MatchData {
     return [
       dateStringToDate(row[0]),

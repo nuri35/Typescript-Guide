@@ -1,6 +1,6 @@
-import { Computer } from './Computer';
+import { Machine } from './Computer';
 
-export class BasicCPU extends Computer {
+export class BasicCPU extends Machine {
   constructor(public model: string, public cores: number) {
     super();
   }

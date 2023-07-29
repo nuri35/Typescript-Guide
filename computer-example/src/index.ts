@@ -10,8 +10,6 @@
 // myComputer.runApplications();
 
 import { BasicCPU } from './interitance/BasicCpu';
-import { HighEndCPU } from './interitance/HighCpu';
-import { Computer } from './interitance/Computer';
 
 const basicCPU = new BasicCPU('Iphone', 4);
 basicCPU.runApplications();

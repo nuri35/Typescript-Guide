@@ -1,6 +1,6 @@
 import { CPU } from './../CpuType';
 
-export class Computer {
+export class Machine {
   constructor(public cpu: CPU) {}
 
   runApplications() {
