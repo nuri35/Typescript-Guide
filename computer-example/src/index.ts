@@ -14,3 +14,4 @@ import { BasicCPU } from './interitance/BasicCpu';
 const basicCPU = new BasicCPU('Iphone', 4);
 basicCPU.runApplications();
 // inheritance call
+ 
