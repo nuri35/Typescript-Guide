@@ -58,6 +58,18 @@ npm run dev
   ![map](./maps/images/one.PNG "map")
 
 
+## 🌍 Typescript project 02 - Object composition and inheritance
+ - Sort  
+  - CsvFileReader  
+  - Summary  
+  - Computer-example  
+
+- > In this project, the concepts of classes and interface structures are utilized to explore design patterns. The application sorts the list of numbers in ascending order. Please note that the application is not a real-world application. It is just a simple example to understand the concepts of classes and interfaces. Also you can explore the concepts of inheritance and object composition in this project by looking at the code.
+
+ 
+
+## 🌍 Typescript project 03 - Web framework
+  - Loading ......
 
 ## Author
 
