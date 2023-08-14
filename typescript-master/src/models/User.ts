@@ -1,4 +1,6 @@
+import axios, { AxiosResponse } from 'axios';
 interface UserProps {
+  id?: number;
   name?: string;
   age?: number;
 }
@@ -47,5 +49,21 @@ export class User {
     handlers.forEach((callback) => {
       callback(); // artık sectıgımız evente göre callback trigger olcak
     });
+  }
+
+  fetch(): void {
+    axios
+      .get(`http://localhost:3000/users/${this.get('id')}`)
+      .then((response: AxiosResponse) => {
+        this.set(response.data);
+      });
+  }
+
+  save(): void {
+    if (this.get('id')) {
+      axios.put(`http://localhost:3000/users/${this.get('id')}`, this.data);
+    } else {
+      axios.post('http://localhost:3000/users', this.data);
+    }
   }
 }
