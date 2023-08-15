@@ -20,3 +20,5 @@ const user = new User({ name: 'new record', age: 0 });
 
 // user.set({ name: 'new name', age: 999 }); // for update  if id exist first set and then save  aslında db'ye save ederken constructor'dakı datayıda guncellemış olduk..
 user.save();
+
+// refectoring *************** coding ***************
