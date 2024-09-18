@@ -6,10 +6,12 @@ interface Location {
   lng: number;
 }
 
-const color = 'red';
+let color = 'adssfs';
 
 export default color; // not recommended export default in ts. fakat bu kendı export yaptıgımız şeyler için gecerlı 3.partı paketlerde export default yapabilirler. kutuphanelerin dokumantasyonlarına bakarak import edebiliriz.
+// const test = '121';
 
+// export default test; multiple export default kullanılmaz...
 export class User implements Mappable {
   color: string;
   name: string;

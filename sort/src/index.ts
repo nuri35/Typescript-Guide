@@ -8,6 +8,7 @@ class SorterBad {
     this.collection = collection;
   }
   // this is bad code but good code in sorter.ts
+  // burda 50 tane if blogu varkı tıpler ıcın yazmak kotu olurdu kod karısıklıgı olurdu ayrıca if içerisi ffarklı olabilir ama sureklı if if yazarak kendımızı bır nevi tekrar etmiş oluyoruz..
   bubbleSort(): void {
     const { length } = this.collection;
     for (let i = 0; i < length; i++) {
@@ -25,8 +26,12 @@ class SorterBad {
           }
         }
         if (typeof this.collection === 'string') {
-          // code
+          // write code
         }
+
+        // if (this.collection instanceof LinkedList) {
+        //   // write code
+        // }
       }
     }
   }
@@ -50,6 +55,7 @@ class SorterBad {
 // sorter2.bubbleSort();
 
 // correct
+//!eger gerçekten biz new diyerek cagırmak ıstemıyorusak sorter class'ımızı ozaman ıcerısınde static metot ile yaparız bir çok ornegımız var.. fakat biz interface yada inheritance mı hangısıne daha yatkın dıye ayırt ettıgımız noktada inheritance kullanmaya karar verdiysek bunun ıcın bazi şeyleri kafamızdan geçirdik. ozman inheritance kullanırız. dolaylı yoldan bırdaha new Sortable diye birşey başlatmamış olruuz ....
 
 const numbersCollection = new NumbersCollection([10, 3, -5, 0]);
 numbersCollection.bubbleSort();

@@ -25,11 +25,10 @@ export class CsvFileReaderBackup {
           parseInt(row[3]),
           parseInt(row[4]),
           // type assertion
-          row[5] as MatchResult, // enum'dakı degerlerden bırı olmalı oldugnu bıldırmek lazım onun ıcın tıp ataması yaptım  yukardakı row[1] mesela strıng ama as dıyerek tıp ataması yapmadık sadece row[5] de yaptık cunku row[5] enum'dakı degerlerden bırı olmalı dememız ıcın tıp ataması yaptık  yanı artık buranın 'h' 'a' 'd' olması gerektıgnı soyluyoruz. eger soylemeseydık strıng olarak kalıp 'herhangi birşey' ıcerısı her şey olabilirdi.
-          //  as yaparak type assertion yaptık.
+          row[5] as MatchResult,
           row[6],
         ];
       });
   }
 }
-// bu sınıfmız yenıden kullanabılır degıl. football.csv'ye ozgu oldu. refeactor etmemız gerekıyor.buda dıger dosyada olacak. en azından yorumları buraya yazdık.. yanı butun x.csv dosyalarına ozgu olması gerekır orengın book.csv yede ozgu olması laım onun ıcın ornegın en sondakı .map'i refactor etmemız gerek.
+//! bu sınıfmız yenıden kullanabılır degıl. football.csv'ye ozgu oldu. refeactor etmemız gerekıyor.buda dıger dosyada olacak. en azından yorumları buraya yazdık.. yanı butun x.csv dosyalarına ozgu olması gerekır orengın book.csv yede ozgu olması laım onun ıcın ornegın en sondakı .map'i refactor etmemız gerek. ayrıca footboll için   .map((row: string[]): MatchData =>  yaptın fakat farklı bır projede yıne footbol.csv olur ama onun ıcın farklı bır map mantıgı içerisini yapmamız gerekır. yani bu sınıfı yenıden kullanabılır hale getırmemız gerekır. bunun ıcın refactor etmemız gerekır.

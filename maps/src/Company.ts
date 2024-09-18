@@ -1,6 +1,7 @@
 import { faker } from '@faker-js/faker';
 import { Mappable } from './CustomMap';
 
+//! bunları new dıyerek cagrıdında zaten tek başına cagırsanda rastgele company user felan olusturur ıcerıısnde boylelıkle bır company nesnesı felan olusturur bunları bılıyoruz..
 export class Company implements Mappable {
   color: string;
   companyName: string;

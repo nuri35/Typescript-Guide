@@ -25,13 +25,12 @@ export class MatchReader {
   }
 }
 
-// example VoteReader maybe can for csv file reader and api reader and this is must be different page
 export class VoteReader {
   matches: string[] = []; // exaMPLE
   constructor(public reader: DataReader) {}
 
   load(): void {
     this.reader.read();
-    this.matches = ['ok']; // bu class'ın constructor'ıan gelen csv'Ye ozgu bı return ıslemı kısmı
+    this.matches = ['ok'];
   }
 }
